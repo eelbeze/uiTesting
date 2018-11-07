@@ -9,7 +9,14 @@
 import UIKit
 
 class AppTableViewController: UITableViewController {
+    
+    //  MARK: - Properties
+    
+    static let segueIdentifier = "AppTableViewControllerSegue"
     var apps: [App] = []
+    
+    
+    // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +32,16 @@ class AppTableViewController: UITableViewController {
         ]
     }
 
+    
     // MARK: - Table view data source
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return apps.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? AppTableViewCell else {
-            return tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AppTableViewCell.reuseIdentifier, for: indexPath) as? AppTableViewCell else {
+            return tableView.dequeueReusableCell(withIdentifier: AppTableViewCell.reuseIdentifier, for: indexPath)
         }
         
         configure(cell: cell, at: indexPath)
@@ -47,12 +56,14 @@ class AppTableViewController: UITableViewController {
         cell.iconImage.image = apps[indexPath.row].image
     }
     
+    
     // MARK: - Table view delegate
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let app = apps[indexPath.row]
         let detailVC = DetailAppViewController()
         detailVC.app = app
-        self.performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
+        self.performSegue(withIdentifier: DetailAppViewController.segueIdentifier, sender: indexPath.row)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

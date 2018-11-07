@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE6C60C42193392900323732 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6C60C32193392900323732 /* LoginViewController.swift */; };
 		BE6D47CE214004DC00A9B13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D47CD214004DC00A9B13C /* AppDelegate.swift */; };
 		BE6D47D3214004DC00A9B13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6D47D1214004DC00A9B13C /* Main.storyboard */; };
 		BE6D47D5214004DE00A9B13C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6D47D4214004DE00A9B13C /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE6C60C32193392900323732 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BE6D47CA214004DC00A9B13C /* uiTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uiTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6D47CD214004DC00A9B13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE6D47D2214004DC00A9B13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				BE6D47CD214004DC00A9B13C /* AppDelegate.swift */,
+				BE6C60C32193392900323732 /* LoginViewController.swift */,
 				BE6D47ED21401DDA00A9B13C /* AppTableViewController.swift */,
 				BE6D47F121403CAA00A9B13C /* AppTableViewCell.swift */,
 				BEB3E7DE2177651E00E7A500 /* DetailAppViewController.swift */,
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6C60C42193392900323732 /* LoginViewController.swift in Sources */,
 				BE6D47EE21401DDA00A9B13C /* AppTableViewController.swift in Sources */,
 				BE6D47F221403CAA00A9B13C /* AppTableViewCell.swift in Sources */,
 				BEB3E7DF2177651E00E7A500 /* DetailAppViewController.swift in Sources */,
