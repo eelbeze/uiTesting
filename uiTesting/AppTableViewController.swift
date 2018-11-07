@@ -13,6 +13,7 @@ class AppTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         apps = [
             App(image: UIImage(named: "iconAskBob")!, name: "AskBob", bundleID: "com.octo.askbob"),
             App(image: UIImage(named: "iconTrello")!, name: "Trello", bundleID: "com.fogcreek.trello"),
@@ -42,8 +43,19 @@ class AppTableViewController: UITableViewController {
         cell.title.text = apps[indexPath.row].name
         cell.detail.text = apps[indexPath.row].bundleID
         
-        cell.iconImage?.layer.masksToBounds = true
         cell.iconImage?.layer.cornerRadius = 15
         cell.iconImage.image = apps[indexPath.row].image
+    }
+    
+    // MARK: - Table view delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let app = apps[indexPath.row]
+        let detailVC = DetailAppViewController()
+        detailVC.app = app
+        self.performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as! DetailAppViewController).app = apps[sender as! Int]
     }
 }
