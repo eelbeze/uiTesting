@@ -17,6 +17,7 @@
 		BE6D47F021401EE400A9B13C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D47EF21401EE400A9B13C /* App.swift */; };
 		BE6D47F221403CAA00A9B13C /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D47F121403CAA00A9B13C /* AppTableViewCell.swift */; };
 		BEB3E7DF2177651E00E7A500 /* DetailAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E7DE2177651E00E7A500 /* DetailAppViewController.swift */; };
+		BEF71B0621A5B57200BC4688 /* XCTestCase+WaitElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF71B0521A5B57200BC4688 /* XCTestCase+WaitElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BE6D47EF21401EE400A9B13C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		BE6D47F121403CAA00A9B13C /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		BEB3E7DE2177651E00E7A500 /* DetailAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAppViewController.swift; sourceTree = "<group>"; };
+		BEF71B0521A5B57200BC4688 /* XCTestCase+WaitElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+WaitElement.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				BE6D47E2214004DE00A9B13C /* uiTestingUITests.swift */,
 				BE6D47E4214004DE00A9B13C /* Info.plist */,
+				BEF71B0521A5B57200BC4688 /* XCTestCase+WaitElement.swift */,
 			);
 			path = uiTestingUITests;
 			sourceTree = "<group>";
@@ -152,7 +155,7 @@
 		BE6D47C2214004DC00A9B13C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Elise El beze";
 				TargetAttributes = {
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF71B0621A5B57200BC4688 /* XCTestCase+WaitElement.swift in Sources */,
 				BE6D47E3214004DE00A9B13C /* uiTestingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

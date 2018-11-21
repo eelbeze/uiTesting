@@ -12,25 +12,61 @@ class uiTestingUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        continueAfterFailure = false
+        XCUIApplication().launch()
+    }
+
+    
+    func testLoginFailure() {
+        let app = XCUIApplication()
+        
+        let username = app.textFields["Username"]
+        username.tap()
+        username.typeText("wrongUsername")
+        
+        let password = app.secureTextFields["Password"]
+        password.tap()
+        password.typeText("wrongPassword")
+        
+        XCUIApplication().buttons["Login"].tap()
+        
+        XCTAssertTrue(app.staticTexts["❌ username or password not match"].exists)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testDisplayListApp() {
+        let app = XCUIApplication()
+        login()
+        
+        // Verify we displayed all applications
+        XCTAssertEqual(app.tables.firstMatch.cells.count, 7)
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testShowAppDetail() {
+        let app = XCUIApplication()
+        login()
+        
+        let trelloCell = app.tables.cells.containing(.staticText, identifier: "Trello").element
+        trelloCell.firstMatch.tap()
+        
+        XCTAssertTrue(app.staticTexts["com.fogcreek.trello"].exists)
+        XCTAssertTrue(app.staticTexts["Trello"].exists)
     }
     
+    private func login() {
+        let app = XCUIApplication()
+        
+        let username = app.textFields["Username"]
+        username.tap()
+        username.typeText("username")
+        
+        let password = app.secureTextFields["Password"]
+        password.tap()
+        password.typeText("password")
+        
+        XCUIApplication().buttons["Login"].tap()
+        
+        // We need to wait the server response
+        waitForElementToAppear(app.navigationBars["Apps"])
+    }
 }
