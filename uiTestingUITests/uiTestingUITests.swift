@@ -7,16 +7,22 @@
 //
 
 import XCTest
+import Snap
 
 class uiTestingUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
 
+        isRecording = true
         continueAfterFailure = false
         XCUIApplication().launch()
     }
 
+    func snapshotView() -> UIView {
+        let app = XCUIApplication()
+        return UIImageView(image: app.windows.firstMatch.screenshot().image)
+    }
     
     func testLoginFailure() {
         let app = XCUIApplication()
@@ -32,6 +38,8 @@ class uiTestingUITests: XCTestCase {
         XCUIApplication().buttons["Login"].tap()
         
         XCTAssertTrue(app.staticTexts["❌ username or password not match"].exists)
+        
+        expect(snapshotView()).toMatchSnapshot()
     }
     
     func testDisplayListApp() {

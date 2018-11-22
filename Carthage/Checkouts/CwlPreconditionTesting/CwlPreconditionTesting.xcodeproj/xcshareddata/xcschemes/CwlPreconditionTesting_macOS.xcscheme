@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE6D47C9214004DC00A9B13C"
-               BuildableName = "uiTesting.app"
-               BlueprintName = "uiTesting"
-               ReferencedContainer = "container:uiTesting.xcodeproj">
+               BlueprintIdentifier = "C98707751C3F886F009B413A"
+               BuildableName = "CwlPreconditionTesting.framework"
+               BlueprintName = "CwlPreconditionTesting_macOS"
+               ReferencedContainer = "container:CwlPreconditionTesting.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,35 +26,28 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "NO">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE6D47DD214004DE00A9B13C"
-               BuildableName = "uiTestingUITests.xctest"
-               BlueprintName = "uiTestingUITests"
-               ReferencedContainer = "container:uiTesting.xcodeproj">
+               BlueprintIdentifier = "C987077F1C3F886F009B413A"
+               BuildableName = "CwlPreconditionTesting_macOSTests.xctest"
+               BlueprintName = "CwlPreconditionTesting_macOSTests"
+               ReferencedContainer = "container:CwlPreconditionTesting.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE6D47C9214004DC00A9B13C"
-            BuildableName = "uiTesting.app"
-            BlueprintName = "uiTesting"
-            ReferencedContainer = "container:uiTesting.xcodeproj">
+            BlueprintIdentifier = "C98707751C3F886F009B413A"
+            BuildableName = "CwlPreconditionTesting.framework"
+            BlueprintName = "CwlPreconditionTesting_macOS"
+            ReferencedContainer = "container:CwlPreconditionTesting.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "SNAP_REFERENCE_IMAGE_PATH"
-            value = "$(SOURCE_ROOT)/$(PROJECT_NAME)UITests/"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -68,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE6D47C9214004DC00A9B13C"
-            BuildableName = "uiTesting.app"
-            BlueprintName = "uiTesting"
-            ReferencedContainer = "container:uiTesting.xcodeproj">
+            BlueprintIdentifier = "C98707751C3F886F009B413A"
+            BuildableName = "CwlPreconditionTesting.framework"
+            BlueprintName = "CwlPreconditionTesting_macOS"
+            ReferencedContainer = "container:CwlPreconditionTesting.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -87,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE6D47C9214004DC00A9B13C"
-            BuildableName = "uiTesting.app"
-            BlueprintName = "uiTesting"
-            ReferencedContainer = "container:uiTesting.xcodeproj">
+            BlueprintIdentifier = "C98707751C3F886F009B413A"
+            BuildableName = "CwlPreconditionTesting.framework"
+            BlueprintName = "CwlPreconditionTesting_macOS"
+            ReferencedContainer = "container:CwlPreconditionTesting.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
