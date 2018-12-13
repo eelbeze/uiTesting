@@ -9,6 +9,8 @@
 import XCTest
 import Snap
 
+@testable import uiTesting
+
 class uiTestingUITests: XCTestCase {
         
     override func setUp() {
@@ -38,7 +40,7 @@ class uiTestingUITests: XCTestCase {
         XCUIApplication().buttons["Login"].tap()
         
         XCTAssertTrue(app.staticTexts["❌ username or password not match"].exists)
-        
+
         expect(snapshotView()).toMatchSnapshot()
     }
     
@@ -48,10 +50,17 @@ class uiTestingUITests: XCTestCase {
         
         // Verify we displayed all applications
         XCTAssertEqual(app.tables.firstMatch.cells.count, 7)
+        XCTAssertTrue(app.tables.cells.firstMatch.staticTexts["com.octo.askbob"].exists)
+        XCTAssertTrue(app.tables.cells.firstMatch.staticTexts["AskBob"].exists)
+        XCTAssertTrue(app.tables.cells.element(boundBy: 1).staticTexts["com.fogcreek.trello"].exists)
+        XCTAssertTrue(app.tables.cells.element(boundBy: 1).staticTexts["Trello"].exists)
+        expect(snapshotView()).toMatchSnapshot()
+        // ....
     }
     
     func testShowAppDetail() {
         let app = XCUIApplication()
+        
         login()
         
         let trelloCell = app.tables.cells.containing(.staticText, identifier: "Trello").element
@@ -59,6 +68,10 @@ class uiTestingUITests: XCTestCase {
         
         XCTAssertTrue(app.staticTexts["com.fogcreek.trello"].exists)
         XCTAssertTrue(app.staticTexts["Trello"].exists)
+        
+        let predicate = NSPredicate(format: "label LIKE 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat ipsum, finibus nec erat sit amet, porta dignissim tortor. Cras venenatis faucibus convallis. In pharetra purus et bibendum sagittis.'")
+        let descriptionLabel = app.staticTexts.element(matching: predicate)
+        XCTAssert(descriptionLabel.exists)
     }
     
     private func login() {

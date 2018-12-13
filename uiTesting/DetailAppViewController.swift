@@ -30,8 +30,7 @@ class DetailAppViewController: UIViewController {
         titleLabel.text = app?.name
         detailLabel.text = app?.bundleID
         descriptionLabel.text = """
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat ipsum, finibus nec erat sit amet, porta dignissim tortor.
-        Cras venenatis faucibus convallis. In pharetra purus et bibendum sagittis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat ipsum, finibus nec erat sit amet, porta dignissim tortor. Cras venenatis faucibus convallis. In pharetra purus et bibendum sagittis.
         """
         imageView.image = app?.image
         imageView.layer.cornerRadius = 15

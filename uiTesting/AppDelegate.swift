@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        #if UITESTING
+        application.windows.first?.windowLevel = UIWindow.Level.statusBar + 1
+        application.windows.first?.layer.speed = 0
+        #endif
         return true
     }
 
