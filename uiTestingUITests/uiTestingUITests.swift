@@ -16,7 +16,7 @@ class uiTestingUITests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        isRecording = true
+//        isRecord ing = true
         continueAfterFailure = false
         XCUIApplication().launch()
     }
@@ -72,6 +72,7 @@ class uiTestingUITests: XCTestCase {
         let predicate = NSPredicate(format: "label LIKE 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat ipsum, finibus nec erat sit amet, porta dignissim tortor. Cras venenatis faucibus convallis. In pharetra purus et bibendum sagittis.'")
         let descriptionLabel = app.staticTexts.element(matching: predicate)
         XCTAssert(descriptionLabel.exists)
+        expect(snapshotView()).toMatchSnapshot()
     }
     
     private func login() {
