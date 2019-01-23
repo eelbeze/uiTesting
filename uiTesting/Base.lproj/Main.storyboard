@@ -112,6 +112,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d11-zz-SGe">
                                 <rect key="frame" x="153.5" y="146" width="68" height="68"/>
+                                <accessibility key="accessibilityConfiguration" identifier="iconIdentifier"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="UMx-P8-4TR"/>
                                     <constraint firstAttribute="width" constant="68" id="Y9Z-dX-7jR"/>
@@ -198,8 +199,8 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="u5v-sZ-IeV">
                                 <rect key="frame" x="169" y="336" width="37" height="37"/>
                             </activityIndicatorView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❌ username or password not match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWg-BK-48f">
-                                <rect key="frame" x="46" y="400" width="283.5" height="20.5"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❌ username or password don't match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWg-BK-48f">
+                                <rect key="frame" x="39.5" y="400" width="296.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

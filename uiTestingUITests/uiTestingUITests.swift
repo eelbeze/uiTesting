@@ -39,7 +39,7 @@ class uiTestingUITests: XCTestCase {
         
         XCUIApplication().buttons["Login"].tap()
         
-        XCTAssertTrue(app.staticTexts["❌ username or password not match"].exists)
+        XCTAssertTrue(app.staticTexts["❌ username or password don't match"].exists)
 
         expect(snapshotView()).toMatchSnapshot()
     }
